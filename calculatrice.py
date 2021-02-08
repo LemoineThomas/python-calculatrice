@@ -4,6 +4,7 @@ from tkinter.messagebox import *
 window = tk.Tk()
 window.title("Ma calculatrice")
 
+#Dimensions de la calculatrice
 window.geometry("350x500")
 window.resizable(0,0)
 
@@ -12,7 +13,7 @@ operationAffichee = ""
 operateur = ""
 operateurUtilise = True
 
-
+#callback
 def btn_1():
     global operationAffichee, operateurUtilise
     operateurUtilise = False
@@ -142,7 +143,7 @@ data = tk.StringVar()
 lbl = tk.Label(master=window, textvariable = data, background = "#ffffff")
 lbl.pack(expand = True, fill = tk.BOTH)
 
-
+#Frames
 btnrow1 = tk.Frame(master=window)
 btnrow1.pack(expand = True, fill = tk.BOTH)
 
@@ -156,7 +157,7 @@ btnrow4 = tk.Frame(master=window)
 btnrow4.pack(expand = True, fill = tk.BOTH)
 
 
-
+#Liste des boutons
 btn7 = tk.Button(master=btnrow1, text = "7", command = btn_7, relief=tk.GROOVE)
 btn7.pack(side = tk.LEFT, expand = True, fill = tk.BOTH)
 
